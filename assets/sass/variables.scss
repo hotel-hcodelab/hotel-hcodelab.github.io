@@ -1,0 +1,39 @@
+:root {
+    --main: #5A96D5;
+    --second: #2D2B87;
+    --third:#69E0A5;
+  
+    --space: 20px;
+    --border-radius: 10px;
+    --overlay: #63636349;
+
+    //Header
+    --header-mobile: #FFA509;
+    --header-desktop: #FFA509;
+    --header-text: #000;
+    --header-hover: #fff;
+
+    
+    // Footer
+    --bg-footer: #fff;
+    --text-footer: var(--main);
+    --text-footer-copyright: #fff;
+  
+    // Texts
+    --text: #636363;
+  
+    //form
+    --text-main: #fff;
+    --text-main-80: rgba(255, 255, 255, 0.80);
+    --form-title-color: #fff;
+  
+    //Button-green
+    --btn-second: #69E0A5;
+    --btn-second-hover: #63d49b;
+    --btn-second-active: #6fecae;
+    //Button Border
+    --bt-border-border: #f8f8f8;
+    --bt-border-hover: #2D2B8744;
+    --bt-border-active: #2D2B87;
+  }
+  

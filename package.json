@@ -1,0 +1,33 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "Projeto de um site para hotel em html e css, com tecnologia sass. Projeto final individual para o curso HcodeLab.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
+    "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotel-hcodelab/hotel-hcodelab.github.io.git"
+  },
+  "keywords": [
+    "hcode",
+    "hcodelab",
+    "html",
+    "css",
+    "sass",
+    "hotel",
+    "website",
+    "site"
+  ],
+  "author": "Velter Garcias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hotel-hcodelab/hotel-hcodelab.github.io/issues"
+  },
+  "homepage": "https://hotel-hcodelab.github.io",
+  "devDependencies": {
+    "sass": "^1.28.0"
+  }
+}
