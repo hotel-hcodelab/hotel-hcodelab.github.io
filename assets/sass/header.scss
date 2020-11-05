@@ -6,11 +6,13 @@
     width: 0;
     height: 0;
     background-color: var(--overlay);
+    z-index: 0;
     transition: all .3s ease-in-out;
 }
 #header {
     width: 60px;
     height: 60px;
+    max-height: 800px;
     max-width: 400px;
     background-color: var(--header-mobile);
     position: absolute;
@@ -21,20 +23,21 @@
     transition: all .3s ease-in-out;
     .menu {
         transition: right .2s ease-in-out, opacity .5s ease-in-out;
-        width: 300px;
+        width: calc(100% - (var(--space) * 2));
+        max-width: 400px;
         height: 100vh;
+        max-height: 800px;
         padding-bottom: 50px;
-        background-color: var(--gray-7);
         position: fixed;
         opacity: 0;
-        right: -300px;
+        right: -400px;
         top: var(--space);
         z-index: 6;
         flex-direction: column;
         justify-content: space-between;
         
         .btn-register {
-            @include button-second;
+            @include button-white;
             margin: 20px;
         }
         .footer {
@@ -71,13 +74,15 @@
         }
         nav {
             flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
             ul {
                 margin: 0;
-                margin-top: 169px;
+                margin-top: 90px;
                 padding: 0;
                 width: 100%;
                 flex-direction: column;
-                max-height: calc(100vh - 250px);
+                max-height: calc(100vh - 210px);
                 overflow-y: auto;
                 li {
                     padding: 14px 0;
@@ -85,6 +90,8 @@
                     justify-content: center;
                     a {
                         text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 18px;
                         color: var(--header-text);
                         transition: color .3s ease-in-out;
                     }
@@ -107,6 +114,7 @@
     #btn-open, #btn-close {
         position: absolute;
         right: 0;
+        top: 0;
         cursor: pointer;
     }
     #btn-close {
@@ -116,10 +124,10 @@
     .logo {
         position: absolute;
         transition: all 1s ease-in-out;
-        right: calc(50vw - 36px);
-        top: 15px;
+        right: calc(50vw - 65px);
+        top: -10px;
         z-index: 7;
-        width: 72px;
+        width: 200px;
     }
 }
 
@@ -129,6 +137,7 @@
         opacity: 1;
         height: 100vh;
         width: 100vw;
+        z-index: 1;
     }
     #header  {
         width: calc(100% - (var(--space) * 2));
@@ -139,7 +148,8 @@
         }
         .logo {
             left: initial;
-            right: 87px;
+            top: 10px;
+            right: 130px;
             width: 120px;
         }
         #btn-open {
@@ -192,16 +202,18 @@
         .menu {
             opacity: 1;
             width: 100%;
+            max-width: initial;
             height: 60px;
             background-color: initial;
             position: relative;
             right: initial;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             padding-bottom: 0;
             top: 0;
             .btn-register {
+                @include button;
                 margin: 0;
                 margin-right: 30px;
             }
@@ -221,8 +233,9 @@
                             min-width: 120px;
                             padding: 10px 0;
                             text-align: center;
+                            color: var(--header-text-desktop);
                             &:hover {
-                                color: var(--header-hover);
+                                color: var(--header-hover-desktop);
                             }
                         }
                     }

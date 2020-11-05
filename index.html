@@ -1,69 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel - Clinica Odontológica</title>
-    <meta name="description" content="Projeto de um site para hotel em html e css, com tecnologia sass. Projeto final individual para o curso HcodeLab.">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#5A96D5">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#5A96D5">
-    <link rel="preload" href="assets/css/main.css" as="style" />
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel - Clinica Odontológica</title>
+  <meta name="description"
+    content="Projeto de um site para hotel em html e css, com tecnologia sass. Projeto final individual para o curso HcodeLab.">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#5A96D5">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#5A96D5">
+  <link rel="preload" href="assets/css/main.css" as="style" />
+  <link rel="stylesheet" href="assets/css/main.css" type="text/css">
 </head>
+
 <body>
   <div class="overlay" data-close="menu"></div>
   <header id="header">
-    <a href="index.html#home"><img src="assets/images/ferrari-logo.svg" class="logo" alt="Logo" /></a>
+    <a href="index.html#home"><img src="assets/images/logo.png" class="logo" alt="Logo" /></a>
     <button type="button" id="btn-open" alt="Abrir Menu" aria-label="Abrir Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path d="M0,0H32V32H0Z" fill="none" />
-            <path d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)" />
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <path d="M0,0H32V32H0Z" fill="none" />
+        <path d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)" />
+      </svg>
     </button>
     <div class="menu">
-        <nav>
-            <button type="button" id="btn-close" data-close="menu" alt="Fechar Menu" aria-label="fechar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                    <path
-                        d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" />
-                    <path d="M0,0H24V24H0Z" fill="none" />
-                </svg>
-            </button>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#service">Acomodações</a></li>
-                <li><a href="index.html#service">O Hotel</a></li>
-                <li><a href="index.html#service">Atrações</a></li>
-                <li><a href="index.html#contact">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="footer">
-            <hr />
-            
-            <a href="auth.html" class="btn-register">
-                Reserva
-            </a>
-        </div>
+      <nav>
+        <button type="button" id="btn-close" data-close="menu" alt="Fechar Menu" aria-label="fechar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path
+              d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" />
+            <path d="M0,0H24V24H0Z" fill="none" />
+          </svg>
+        </button>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#service">Acomodações</a></li>
+          <li><a href="index.html#service">O Hotel</a></li>
+          <li><a href="index.html#service">Atrações</a></li>
+          <li><a href="index.html#contact">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer">
+
+        <a href="auth.html" class="btn-register">
+          Reserva
+        </a>
+      </div>
     </div>
   </header>
-
+  <section class="banner-home">
+    <div class="overlay-banner"></div>
+    <h1>Venha e <br /> viva essa experiência!</h1>
+  </section>
   <main id="home">
+    <div class="section">
+      <div class="section-content">
+        <h2 class="section-title">Nossas <strong>Acomodações</strong> </h2>
+        <p>Os melhores hotéis são aqueles que têm história, que mantêm em suas raízes a cultura do lugar onde estão instalados. Com quase vinte anos de experiência em receber pessoas, o hotel... leva Bento Gonçalves em sua essência: valoriza a cultura da Capital do Vinho e das tradições herdadas dos italianos, mas sem deixar de lado a modernidade e o conforto que os hóspedes buscam quando visitam a cidade.</p>
+        <a class="action" href="#" alt="Conheça todas as acomodações">Conheça todas
+          <svg xmlns="http://www.w3.org/2000/svg" width="7.179" height="12.594" viewBox="0 0 7.179 12.594"><g transform="translate(137.862 -269)"><g transform="translate(-137.862 269)"><path d="M104.059,6.92l-5.415,5.415A.882.882,0,0,1,97.4,11.088L102.188,6.3,97.4,1.505A.882.882,0,0,1,98.644.258l5.415,5.415a.882.882,0,0,1,0,1.247Z" transform="translate(-97.138 0)" fill="currentColor"/></g></g></svg>
+        </a>
+      </div>
 
+      <div class="section-second">
+        <picture>
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img src="assets/images/suite-master.jpg" alt="Suíte Master Interior" />
+        </picture>
+      </div>
+
+    </div>
   </main>
 
   <!-- <footer id="footer">
@@ -191,4 +212,5 @@
   <script src="assets/js/menu.js"></script>
 
 </body>
+
 </html>

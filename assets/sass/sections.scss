@@ -1,0 +1,35 @@
+.section {
+    flex-direction: column-reverse;
+    .section-content {
+        flex-direction: column;
+        padding: var(--space);
+        .section-title {
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 50px;
+            font-size: 35px;
+            font-family: 'Poppins', sans-serif;
+            > strong {
+                color: var(--main);
+            }
+        }
+        > p {
+            font-size: 18px;
+            color: var(--text);
+        }
+        .action {
+            @include button-border;
+            align-self: center;
+            > svg {
+                margin-left: 10px;
+                margin-bottom: -0.5px;
+            }
+        }
+    }
+    .section-second {
+        img {
+            width: 100%;    
+        }
+    }
+
+}

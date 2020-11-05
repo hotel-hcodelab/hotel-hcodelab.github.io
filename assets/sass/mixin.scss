@@ -6,21 +6,21 @@
     font-size: 16px;
     font-weight: bold;
     border-radius: var(--border-radius);
+    border: 2px solid transparent;
     outline: none;
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 20px;
     cursor: pointer;
-    background: transparent;    
-    color: var(--black);
+    background: var(--btn);    
+    color: var(--btn-text);
+    width: fit-content;
+    transition: background-color .2s ease-in-out;
     &:hover {
-        background-color: var(--black-10);
+        background-color: var(--btn-hover);
     }
     &:active {
-        background-color: var(--black-75);
-    }
-    @media (min-width: 768px) {
-        min-width: 150px;
+        background-color: var(--btn-active);
     }
 }
 
@@ -36,50 +36,32 @@
     }
 }
 
-@mixin button-black {
+
+@mixin button-white {
     @include button;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--btn-white);
+    color: var(--btn-white-text);
     &:hover {
-        background-color: var(--black-hover);
+        background-color: var(--btn-white-hover);
     }
     &:active {
-        background-color: var(--black-active);
+        background-color: var(--btn-white-active);
     }
 }
 
-@mixin button-gray {
+@mixin button-border {
     @include button;
-    background-color: var(--gray-3);
-    color: var(--gray-0);
+    background-color: transparent;
+    color: var(--btn-border-text);
+    border-color: var(--btn-border);
     &:hover {
-        background-color: var(--gray-hover);
+        background-color: var(--btn-border-hover);
+        color: #fff;
     }
     &:active {
-        background-color: var(--gray-active);
+        background-color: var(--btn-border-active);
+        color: #fff;
     }
 }
 
-@mixin button-red {
-    @include button;
-    background-color: var(--red);
-    color: var(--white);
-    &:hover {
-        background-color: var(--red-hover);
-    }
-    &:active {
-        background-color: var(--red-active);
-    }
-}
 
-@mixin button-blue {
-    @include button;
-    background-color: var(--blue);
-    color: var(--white);
-    &:hover {
-        background-color: var(--blue-hover);
-    }
-    &:active {
-        background-color: var(--blue-active);
-    }
-}

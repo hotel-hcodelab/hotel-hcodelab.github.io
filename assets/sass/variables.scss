@@ -1,5 +1,5 @@
 :root {
-    --main: #5A96D5;
+    --main: #FF5D09;
     --second: #2D2B87;
     --third:#69E0A5;
   
@@ -8,10 +8,12 @@
     --overlay: #63636349;
 
     //Header
-    --header-mobile: #FFA509;
-    --header-desktop: #FFA509;
-    --header-text: #000;
-    --header-hover: #fff;
+    --header-mobile: #ff5b09f3;
+    --header-desktop: transparent;
+    --header-text: #fff;
+    --header-hover: #000;
+    --header-text-desktop: #000;
+    --header-hover-desktop: #FF5D09;
 
     
     // Footer
@@ -20,20 +22,32 @@
     --text-footer-copyright: #fff;
   
     // Texts
-    --text: #636363;
+    --text: #707070;
   
     //form
     --text-main: #fff;
     --text-main-80: rgba(255, 255, 255, 0.80);
     --form-title-color: #fff;
-  
-    //Button-green
+    //Button
+    --btn: #FF5D09;
+    --btn-hover: #ff6f28;
+    --btn-active: #c74808;
+    --btn-text: #fff;
+
+    //Button-white
+    --btn-white: #fff;
+    --btn-white-hover: rgb(216, 216, 216);
+    --btn-white-active: rgb(170, 170, 170);
+    --btn-white-text: #FF5D09;
+    
+    //Button-second
     --btn-second: #69E0A5;
     --btn-second-hover: #63d49b;
     --btn-second-active: #6fecae;
     //Button Border
-    --bt-border-border: #f8f8f8;
-    --bt-border-hover: #2D2B8744;
-    --bt-border-active: #2D2B87;
+    --btn-border: #FF5D09;
+    --btn-border-hover: #ff732d;
+    --btn-border-active: #c74808;
+    --btn-border-text: #FF5D09;
   }
   

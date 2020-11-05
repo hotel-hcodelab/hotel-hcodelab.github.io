@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -5,29 +6,40 @@
   src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
 }
 :root {
-  --main: #5A96D5;
+  --main: #FF5D09;
   --second: #2D2B87;
   --third:#69E0A5;
   --space: 20px;
   --border-radius: 10px;
   --overlay: #63636349;
-  --header-mobile: #FFA509;
-  --header-desktop: #FFA509;
-  --header-text: #000;
-  --header-hover: #fff;
+  --header-mobile: #ff5b09f3;
+  --header-desktop: transparent;
+  --header-text: #fff;
+  --header-hover: #000;
+  --header-text-desktop: #000;
+  --header-hover-desktop: #FF5D09;
   --bg-footer: #fff;
   --text-footer: var(--main);
   --text-footer-copyright: #fff;
-  --text: #636363;
+  --text: #707070;
   --text-main: #fff;
   --text-main-80: rgba(255, 255, 255, 0.80);
   --form-title-color: #fff;
+  --btn: #FF5D09;
+  --btn-hover: #ff6f28;
+  --btn-active: #c74808;
+  --btn-text: #fff;
+  --btn-white: #fff;
+  --btn-white-hover: rgb(216, 216, 216);
+  --btn-white-active: rgb(170, 170, 170);
+  --btn-white-text: #FF5D09;
   --btn-second: #69E0A5;
   --btn-second-hover: #63d49b;
   --btn-second-active: #6fecae;
-  --bt-border-border: #f8f8f8;
-  --bt-border-hover: #2D2B8744;
-  --bt-border-active: #2D2B87;
+  --btn-border: #FF5D09;
+  --btn-border-hover: #ff732d;
+  --btn-border-active: #c74808;
+  --btn-border-text: #FF5D09;
 }
 
 * {
@@ -42,7 +54,7 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 body {
   margin: 0;
   flex-direction: column;
-  font-family: "Manrope", sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: var(--bg-color);
 }
 body > main {
@@ -62,12 +74,14 @@ body > main {
   width: 0;
   height: 0;
   background-color: var(--overlay);
+  z-index: 0;
   transition: all 0.3s ease-in-out;
 }
 
 #header {
   width: 60px;
   height: 60px;
+  max-height: 800px;
   max-width: 400px;
   background-color: var(--header-mobile);
   position: absolute;
@@ -79,13 +93,14 @@ body > main {
 }
 #header .menu {
   transition: right 0.2s ease-in-out, opacity 0.5s ease-in-out;
-  width: 300px;
+  width: calc(100% - (var(--space) * 2));
+  max-width: 400px;
   height: 100vh;
+  max-height: 800px;
   padding-bottom: 50px;
-  background-color: var(--gray-7);
   position: fixed;
   opacity: 0;
-  right: -300px;
+  right: -400px;
   top: var(--space);
   z-index: 6;
   flex-direction: column;
@@ -99,33 +114,31 @@ body > main {
   font-size: 16px;
   font-weight: bold;
   border-radius: var(--border-radius);
+  border: 2px solid transparent;
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px 20px;
   cursor: pointer;
-  background: transparent;
-  color: var(--black);
-  background-color: var(--btn-second);
-  color: var(--white);
+  background: var(--btn);
+  color: var(--btn-text);
+  width: fit-content;
+  transition: background-color 0.2s ease-in-out;
+  background-color: var(--btn-white);
+  color: var(--btn-white-text);
   margin: 20px;
 }
 #header .menu .btn-register:hover {
-  background-color: var(--black-10);
+  background-color: var(--btn-hover);
 }
 #header .menu .btn-register:active {
-  background-color: var(--black-75);
-}
-@media (min-width: 768px) {
-  #header .menu .btn-register {
-    min-width: 150px;
-  }
+  background-color: var(--btn-active);
 }
 #header .menu .btn-register:hover {
-  background-color: var(--btn-second-hover);
+  background-color: var(--btn-white-hover);
 }
 #header .menu .btn-register:active {
-  background-color: var(--btn-second-active);
+  background-color: var(--btn-white-active);
 }
 #header .menu .footer {
   flex-direction: column;
@@ -161,14 +174,16 @@ body > main {
 }
 #header .menu nav {
   flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
 }
 #header .menu nav ul {
   margin: 0;
-  margin-top: 169px;
+  margin-top: 90px;
   padding: 0;
   width: 100%;
   flex-direction: column;
-  max-height: calc(100vh - 250px);
+  max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
 #header .menu nav ul li {
@@ -178,6 +193,8 @@ body > main {
 }
 #header .menu nav ul li a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
   color: var(--header-text);
   transition: color 0.3s ease-in-out;
 }
@@ -196,6 +213,7 @@ body > main {
 #header #btn-open, #header #btn-close {
   position: absolute;
   right: 0;
+  top: 0;
   cursor: pointer;
 }
 #header #btn-close {
@@ -205,10 +223,10 @@ body > main {
 #header .logo {
   position: absolute;
   transition: all 1s ease-in-out;
-  right: calc(50vw - 36px);
-  top: 15px;
+  right: calc(50vw - 65px);
+  top: -10px;
   z-index: 7;
-  width: 72px;
+  width: 200px;
 }
 
 .open-menu {
@@ -218,6 +236,7 @@ body > main {
   opacity: 1;
   height: 100vh;
   width: 100vw;
+  z-index: 1;
 }
 .open-menu #header {
   width: calc(100% - (var(--space) * 2));
@@ -229,7 +248,8 @@ body > main {
 }
 .open-menu #header .logo {
   left: initial;
-  right: 87px;
+  top: 10px;
+  right: 130px;
   width: 120px;
 }
 .open-menu #header #btn-open {
@@ -281,19 +301,43 @@ body > main {
   #header .menu {
     opacity: 1;
     width: 100%;
+    max-width: initial;
     height: 60px;
     background-color: initial;
     position: relative;
     right: initial;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding-bottom: 0;
     top: 0;
   }
   #header .menu .btn-register {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--btn);
+    color: var(--btn-text);
+    width: fit-content;
+    transition: background-color 0.2s ease-in-out;
     margin: 0;
     margin-right: 30px;
+  }
+  #header .menu .btn-register:hover {
+    background-color: var(--btn-hover);
+  }
+  #header .menu .btn-register:active {
+    background-color: var(--btn-active);
   }
   #header .menu nav {
     width: 100%;
@@ -312,9 +356,10 @@ body > main {
     min-width: 120px;
     padding: 10px 0;
     text-align: center;
+    color: var(--header-text-desktop);
   }
   #header .menu nav ul li a:hover {
-    color: var(--header-hover);
+    color: var(--header-hover-desktop);
   }
   #header .menu .footer {
     width: initial;
@@ -326,6 +371,100 @@ body > main {
   #header .menu .footer > div {
     height: 100px;
   }
+}
+.section {
+  flex-direction: column-reverse;
+}
+.section .section-content {
+  flex-direction: column;
+  padding: var(--space);
+}
+.section .section-content .section-title {
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 50px;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+.section .section-content .section-title > strong {
+  color: var(--main);
+}
+.section .section-content > p {
+  font-size: 18px;
+  color: var(--text);
+}
+.section .section-content .action {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: var(--btn);
+  color: var(--btn-text);
+  width: fit-content;
+  transition: background-color 0.2s ease-in-out;
+  background-color: transparent;
+  color: var(--btn-border-text);
+  border-color: var(--btn-border);
+  align-self: center;
+}
+.section .section-content .action:hover {
+  background-color: var(--btn-hover);
+}
+.section .section-content .action:active {
+  background-color: var(--btn-active);
+}
+.section .section-content .action:hover {
+  background-color: var(--btn-border-hover);
+  color: #fff;
+}
+.section .section-content .action:active {
+  background-color: var(--btn-border-active);
+  color: #fff;
+}
+.section .section-content .action > svg {
+  margin-left: 10px;
+  margin-bottom: -0.5px;
+}
+.section .section-second img {
+  width: 100%;
+}
+
+.banner-home {
+  position: relative;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url("/assets/images/banner-home.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.banner-home > h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #fff;
+  margin: 40px;
+  margin-bottom: 70px;
+  line-height: 60px;
+  z-index: 1;
+}
+
+.overlay-banner {
+  position: absolute;
+  background: black;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 45%, white 100%);
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

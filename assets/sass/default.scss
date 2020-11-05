@@ -11,7 +11,7 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 body {
     margin: 0;
     flex-direction: column;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-color);
     > main {
         min-height: calc(100vh - 400px);
