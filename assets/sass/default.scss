@@ -14,7 +14,28 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-color);
     > main {
+        flex-direction: column;
         min-height: calc(100vh - 400px);
+    }
+    .banner-pages {
+        position: relative;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: url("/assets/images/acomodacoes.jpg");
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        height: 300px;
+        > h1 {
+            text-transform: uppercase;
+            font-size: 40px;
+            color: #fff;
+            margin: 40px;
+            margin-bottom: 70px;
+            line-height: 60px;
+            z-index: 1;
+        }
     }
 }
 
