@@ -21,7 +21,6 @@ body {
         position: relative;
         align-items: flex-end;
         justify-content: center;
-        background-image: url("/assets/images/acomodacoes.jpg");
         background-size: cover;
         background-position-x: center;
         background-position-y: center;
@@ -29,13 +28,30 @@ body {
         height: 300px;
         > h1 {
             text-transform: uppercase;
-            font-size: 40px;
+            font-size: 30px;
             color: #fff;
             margin: 40px;
             margin-bottom: 70px;
             line-height: 60px;
             z-index: 1;
         }
+    }
+    #bedrooms-banner {
+        background-image: url("/assets/images/acomodacoes-mobile.jpg");
+        background-position-x: left;
+    }
+    #attractions-banner {
+        background-image: url("/assets/images/banner-atracoes.jpg");
+        background-position-x: left;
+    }
+    #hotel-banner {
+        background-image: url("/assets/images/banner-hotel.jpg");
+    }
+    #reservas-banner {
+        background-image: url("/assets/images/reservas.jpg");
+    }
+    #contato-banner {
+        background-image: url("/assets/images/contato.jpg");
     }
 }
 
@@ -44,6 +60,31 @@ body {
     body {
         > main {
             min-height: calc(100vh - 341px);
+        }
+        .banner-pages {
+            position: relative;
+            align-items: flex-end;
+            justify-content: center;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            height: 415px;
+            > h1 {
+                width: 100%;
+                max-width: 1200px;
+                text-transform: uppercase;
+                font-size: 50px;
+                color: #fff;
+                margin: 40px;
+                margin-bottom: 70px;
+                margin-left: 170px;
+                line-height: 60px;
+                z-index: 1;
+            }
+        }
+        #bedrooms-banner {
+            background-image: url("/assets/images/acomodacoes-desktop.jpg");
         }
     }
 }

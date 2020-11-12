@@ -73,6 +73,11 @@
 }
 
 @media (min-width: 1200px) {
+    .banner-home {
+        > h1 {
+            margin-bottom: 100px;
+        }
+    }
     .divider {
         .custom-shape-divider-top-1604624824 svg {
             position: relative;

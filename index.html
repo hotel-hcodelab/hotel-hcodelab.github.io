@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel - Clinica Odontológica</title>
+  <title>Valentini Hotel - Página Inicial</title>
   <meta name="description"
     content="Projeto de um site para hotel em html e css, com tecnologia sass. Projeto final individual para o curso HcodeLab.">
   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
@@ -21,9 +21,9 @@
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#5A96D5">
+  <meta name="msapplication-TileColor" content="#DCC79E">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#5A96D5">
+  <meta name="theme-color" content="#DCC79E">
   <link rel="preload" href="assets/css/main.css" as="style" />
   <link rel="stylesheet" href="assets/css/main.css" type="text/css">
 </head>
@@ -48,16 +48,16 @@
           </svg>
         </button>
         <ul>
-          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="acomodacoes.html">Acomodações</a></li>
-          <li><a href="index.html#service">O Hotel</a></li>
-          <li><a href="index.html#service">Atrações</a></li>
-          <li><a href="index.html#contact">Contato</a></li>
+          <li><a href="hotel.html">O Hotel</a></li>
+          <li><a href="atracoes.html">Atrações</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
       <div class="footer">
 
-        <a href="auth.html" class="btn-register">
+        <a href="reservas.html" class="btn-register">
           Reserva
         </a>
       </div>
@@ -68,6 +68,42 @@
     <h1>Venha e <br /> viva essa experiência!</h1>
   </section>
   <main id="home">
+
+    <section class="schedule home">
+      <div class="schedule-wrapper">
+        <div class="schedule-main">
+          <form action="">
+            <h2 class="form-title">Reserve Já</h2>
+            <div class="field">
+              <input type="date" name="check-in" id="check-in">
+              <label for="check-in">Check In</label>
+            </div>
+
+            <div class="field">
+              <input type="date" name="check-out" id="check-out">
+              <label for="check-out">Check Out</label>
+            </div>
+
+            <div class="field">
+              
+              <select id="room">
+                <option disabled selected value="0">Escolha um quarto</option>
+                <option value="1">Suíte Master</option>
+                <option value="2">Suíte Júnior</option>
+                <option value="3">Apto Luxo</option>
+              </select>
+              <label for="room">Quarto</label>
+            </div>
+
+            <button type="submit" >Reservar</button>
+          </form>
+        </div>
+        <div class="schedule-second">
+
+        </div>
+      </div>
+      
+    </section>
 
     <section class="section reverse-mobile">
       <div class="section-wrapper">

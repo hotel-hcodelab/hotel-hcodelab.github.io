@@ -12,7 +12,7 @@
   --space: 20px;
   --border-radius: 10px;
   --overlay: #63636349;
-  --header-mobile: #ff5b09f3;
+  --header-mobile: #ff5b09e7;
   --header-desktop: transparent;
   --header-text: #fff;
   --header-hover: #000;
@@ -42,6 +42,9 @@
   --btn-border-hover: #ff732d;
   --btn-border-active: #c74808;
   --btn-border-text: #FF5D09;
+  --form-bg: #fff;
+  --label: #271B06;
+  --bg-input: #EEEEEE;
 }
 
 * {
@@ -67,7 +70,6 @@ body .banner-pages {
   position: relative;
   align-items: flex-end;
   justify-content: center;
-  background-image: url("/assets/images/acomodacoes.jpg");
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -76,17 +78,59 @@ body .banner-pages {
 }
 body .banner-pages > h1 {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
   margin: 40px;
   margin-bottom: 70px;
   line-height: 60px;
   z-index: 1;
 }
+body #bedrooms-banner {
+  background-image: url("/assets/images/acomodacoes-mobile.jpg");
+  background-position-x: left;
+}
+body #attractions-banner {
+  background-image: url("/assets/images/banner-atracoes.jpg");
+  background-position-x: left;
+}
+body #hotel-banner {
+  background-image: url("/assets/images/banner-hotel.jpg");
+}
+body #reservas-banner {
+  background-image: url("/assets/images/reservas.jpg");
+}
+body #contato-banner {
+  background-image: url("/assets/images/contato.jpg");
+}
 
 @media (min-width: 1200px) {
   body > main {
     min-height: calc(100vh - 341px);
+  }
+  body .banner-pages {
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height: 415px;
+  }
+  body .banner-pages > h1 {
+    width: 100%;
+    max-width: 1200px;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff;
+    margin: 40px;
+    margin-bottom: 70px;
+    margin-left: 170px;
+    line-height: 60px;
+    z-index: 1;
+  }
+  body #bedrooms-banner {
+    background-image: url("/assets/images/acomodacoes-desktop.jpg");
   }
 }
 #footer {
@@ -552,6 +596,16 @@ body .banner-pages > h1 {
   font-size: 18px;
   color: var(--text);
 }
+.section .section-content > ul {
+  flex-direction: column;
+  font-size: 16px;
+  color: var(--text);
+  margin-top: 0;
+}
+.section .section-content > ul li {
+  list-style-type: circle;
+  display: list-item;
+}
 .section .section-content .action {
   border: none;
   display: flex;
@@ -620,6 +674,7 @@ body .banner-pages > h1 {
 }
 .section .section-second picture {
   width: 100%;
+  padding: 10px 5px;
 }
 .section .section-second picture.picture-hidden {
   overflow: hidden;
@@ -638,9 +693,14 @@ body .banner-pages > h1 {
   border-radius: var(--border-radius);
   box-shadow: 2px 3px 6px #0000004d;
 }
-.section .section-second picture img.img-coffee {
+.section .section-second picture img.img-coffee, .section .section-second picture img.img-bedrooms {
   border-radius: var(--border-radius);
   margin-left: 20px;
+  box-shadow: 2px 3px 6px #0000004d;
+}
+.section .section-second picture img.img-bedrooms-reverse {
+  border-radius: var(--border-radius);
+  margin-left: -20px;
   box-shadow: 2px 3px 6px #0000004d;
 }
 .section .section-gallery {
@@ -653,6 +713,7 @@ body .banner-pages > h1 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 10px 0px;
 }
 .section .section-gallery > picture > img {
   width: 99%;
@@ -695,7 +756,10 @@ body .banner-pages > h1 {
     border-radius: var(--border-radius);
     box-shadow: 2px 3px 6px #0000004d;
   }
-  .section .section-second picture img.img-coffee {
+  .section .section-second picture img.img-coffee, .section .section-second picture img.img-bedrooms {
+    margin-left: 0;
+  }
+  .section .section-second picture img.img-bedrooms-reverse {
     margin-left: 0;
   }
 }
@@ -828,6 +892,10 @@ body .banner-pages > h1 {
   }
 }
 @media (min-width: 1200px) {
+  .banner-home > h1 {
+    margin-bottom: 100px;
+  }
+
   .divider .custom-shape-divider-top-1604624824 svg {
     position: relative;
     display: block;
@@ -838,6 +906,204 @@ body .banner-pages > h1 {
 @media (min-width: 1500px) {
   .banner-home > h1 {
     margin-left: 15vw;
+  }
+}
+.schedule {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.schedule.contato {
+  flex-direction: column;
+}
+.schedule.contato .map {
+  background-image: url("/assets/images/map-mobile.png");
+  background-size: cover;
+  background-position-x: 30%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  margin-top: -70px;
+}
+.schedule .schedule-wrapper {
+  width: 100%;
+  max-width: 1400px;
+}
+.schedule .schedule-second {
+  display: none;
+}
+.schedule .schedule-main {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px;
+  z-index: 1;
+}
+.schedule .schedule-main > form {
+  width: 90%;
+  max-width: 400px;
+  padding: var(--space);
+  border-radius: 20px;
+  background-color: var(--form-bg);
+  box-shadow: 2px 3px 6px #0000004d;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+}
+.schedule .schedule-main > form .form-title {
+  font-size: 25px;
+  align-self: center;
+  margin: 10px 0;
+}
+.schedule .schedule-main > form .field {
+  flex-direction: column;
+  padding: 5px 0px;
+  width: 100%;
+  margin-bottom: var(--space);
+}
+.schedule .schedule-main > form .field > label {
+  order: 0;
+  font-size: 14px;
+  color: var(--label);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.schedule .schedule-main > form .field > input, .schedule .schedule-main > form .field > select {
+  order: 1;
+  outline: none;
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid transparent;
+  line-height: 20px;
+  font-size: 14px;
+  padding: 15px;
+}
+.schedule .schedule-main > form .field > input:focus, .schedule .schedule-main > form .field > select:focus {
+  border: 1px solid var(--main);
+  color: var(--main);
+}
+.schedule .schedule-main > form .field input:focus + label, .schedule .schedule-main > form .field select:focus + label {
+  color: var(--main);
+}
+.schedule .schedule-main > form > button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: var(--btn);
+  color: var(--btn-text);
+  width: fit-content;
+  transition: background-color 0.2s ease-in-out;
+  align-self: center;
+}
+.schedule .schedule-main > form > button:hover {
+  background-color: var(--btn-hover);
+}
+.schedule .schedule-main > form > button:active {
+  background-color: var(--btn-active);
+}
+
+@media (min-width: 1200px) {
+  .schedule.contato {
+    position: relative;
+  }
+  .schedule.contato .map {
+    position: absolute;
+    top: 70px;
+    background-image: url("/assets/images/map.png");
+    background-size: cover;
+    background-position-x: 30%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    margin-top: -70px;
+  }
+  .schedule .schedule-main {
+    margin-top: -150px;
+    width: 50%;
+    order: 2;
+  }
+  .schedule .schedule-second {
+    display: flex;
+    width: 50%;
+    order: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .schedule .schedule-second > p {
+    margin: 0;
+    width: 80%;
+    font-size: 40px;
+    color: var(--text);
+  }
+  .schedule.home .schedule-main {
+    margin-top: -75px;
+    width: 100%;
+  }
+  .schedule.home .schedule-main > form {
+    position: relative;
+    max-width: initial;
+    flex-direction: row;
+    width: fit-content;
+    padding: var(--space) 40px;
+  }
+  .schedule.home .schedule-main > form .form-title {
+    display: none;
+  }
+  .schedule.home .schedule-main > form .field {
+    margin-right: var(--space);
+    max-width: 200px;
+  }
+  .schedule.home .schedule-main > form > button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--btn);
+    color: var(--btn-text);
+    width: fit-content;
+    transition: background-color 0.2s ease-in-out;
+    align-self: center;
+  }
+  .schedule.home .schedule-main > form > button:hover {
+    background-color: var(--btn-hover);
+  }
+  .schedule.home .schedule-main > form > button:active {
+    background-color: var(--btn-active);
+  }
+  .schedule.home .schedule-second {
+    display: none;
+  }
+}
+.page .divider {
+  padding-bottom: 100px;
+}
+.page .divider.last {
+  margin-bottom: -70px;
+}
+
+@media (min-width: 768px) {
+  .page .divider {
+    padding-top: 200px;
   }
 }
 

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrações - Valentini Hotel</title>
+  <meta name="description"
+    content="Projeto de um site para hotel em html e css, com tecnologia sass. Projeto final individual para o curso HcodeLab.">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#DCC79E">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#DCC79E">
+  <link rel="preload" href="assets/css/main.css" as="style" />
+  <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+</head>
+
+<body>
+  <div class="overlay" data-close="menu"></div>
+  <header id="header">
+    <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="Logo" /></a>
+    <button type="button" id="btn-open" alt="Abrir Menu" aria-label="Abrir Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <path d="M0,0H32V32H0Z" fill="none" />
+        <path d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)" />
+      </svg>
+    </button>
+    <div class="menu">
+      <nav>
+        <button type="button" id="btn-close" data-close="menu" alt="Fechar Menu" aria-label="fechar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path
+              d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" />
+            <path d="M0,0H24V24H0Z" fill="none" />
+          </svg>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acomodacoes.html">Acomodações</a></li>
+          <li><a href="hotel.html">O Hotel</a></li>
+          <li><a href="atracoes.html">Atrações</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer">
+
+        <a href="reservas.html" class="btn-register">
+          Reserva
+        </a>
+      </div>
+    </div>
+  </header>
+  <section id="attractions-banner" class="banner-pages">
+    <div class="overlay-banner"></div>
+    <h1>Atrações</h1>
+  </section>
+  <main id="attractions" class="page">
+
+    <section class="schedule">
+      <div class="schedule-wrapper">
+        <div class="schedule-main">
+          <form action="">
+            <h2 class="form-title">Reserve Já</h2>
+            <div class="field">
+              <input type="date" name="check-in" id="check-in">
+              <label for="check-in">Check In</label>
+            </div>
+
+            <div class="field">
+              <input type="date" name="check-out" id="check-out">
+              <label for="check-out">Check Out</label>
+            </div>
+
+            <div class="field">
+              
+              <select id="room">
+                <option disabled selected value="0">Escolha um quarto</option>
+                <option value="1">Suíte Master</option>
+                <option value="2">Suíte Júnior</option>
+                <option value="3">Apto Luxo</option>
+              </select>
+              <label for="room">Quarto</label>
+            </div>
+
+            <button type="submit" >Reservar</button>
+          </form>
+        </div>
+        <div class="schedule-second">
+          <p>Perfeito para famílias que vêm para a cidade a passeio ou para quem não abre </p>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="section">
+      <div class="section-wrapper">
+      <div class="section-content">
+        <h2 class="section-title">Maria <strong>Fumaça</strong> </h2>
+        <p>O passeio turístico de trem a vapor é uma memorável atração na Serra Gaúcha, na Região Uva e Vinho. Os turistas são recepcionados na estação de Bento Gonçalves com uma deliciosa degustação de vinho. Ao soar o sino, todos embarcam numa viagem repleta de alegria e que traduz o jeito de ser dos imigrantes italianos. São 23 quilômetros de agradável percurso com duração média de 2 horas. Durante o passeio, a festa é conduzida por atrações típicas italianas e gaúchas.
+          </p>
+        
+      </div>
+
+      <div class="section-second">
+        <picture class="picture-hidden">
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img class="img-bedrooms" src="assets/images/atracoes2.jpg" alt="Maria Fumaça" />
+        </picture>
+      </div>
+    </div>
+    </section>
+
+    <section class="section reverse-desktop divider">
+      <div class="section-wrapper">
+        <div class="custom-shape-divider-top-1604624824">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+              opacity=".25" class="shape-fill"></path>
+            <path
+              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+              opacity=".5" class="shape-fill"></path>
+            <path
+              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              class="shape-fill"></path>
+          </svg>
+        </div>
+      <div class="section-content">
+        <h2 class="section-title">Cave <strong>de Pedra</strong> </h2>
+        <p>A Vinícola Cave de Pedra possui uma arquitetura medieval, construída inteiramente em pedra basalto, em meio a deslumbrantes paisagens, montanhas e vinhedos da serra gaúcha, no ano de 1997 surgiu a Cave de Pedra, uma das primeiras vinícolas boutiques do Brasil localizada em Bento Gonçalves. Especialista na elaboração de espumantes pelo Método Tradicional, que resulta em bebidas com excelência em qualidade. A vinícola também resguarda em seus produtos toda tipicidade do Vale dos Vinhedos proporcionando uma experiência diferenciada na escolha e consumo de vinhos tintos, vinhos brancos e espumantes.</p>
+        
+      </div>
+
+      <div class="section-second">
+        <picture class="picture-hidden">
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img class="img-bedrooms-reverse" src="assets/images/atracoes3.jpg" alt="Cave de Pedra" />
+        </picture>
+      </div>
+    </div>
+    </section>
+
+    <section class="section">
+      <div class="section-wrapper">
+      <div class="section-content">
+        <h2 class="section-title">Pipa <strong>Pórtico</strong> </h2>
+        <p>Ao chegar a Bento Gonçalves o visitante literalmente está ‘Entrando no Mundo do Vinho’.
+          No acesso principal da cidade, um pórtico em formato de pipa medindo 17 metros de altura dá as boas-vindas ao visitante. A Pipa Pórtico, construída em 1985, é considerada o cartão de visita da cidade. </p>
+        
+      </div>
+
+      <div class="section-second">
+        <picture class="picture-hidden">
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img class="img-bedrooms" src="assets/images/atracoes4.jpg" alt="Pipa Pórtico" />
+        </picture>
+      </div>
+    </div>
+    </section>
+
+    <section class="section reverse-desktop divider last">
+      <div class="section-wrapper">
+        <div class="custom-shape-divider-top-1604624824">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+              opacity=".25" class="shape-fill"></path>
+            <path
+              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+              opacity=".5" class="shape-fill"></path>
+            <path
+              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              class="shape-fill"></path>
+          </svg>
+        </div>
+      <div class="section-content">
+        <h2 class="section-title">Caminhos <strong>de Pedra</strong> </h2>
+        <p>A arquitetura e os costumes dos imigrantes preservados através do tempo. O roteiro resgata o passado em busca da valorização e preservação dos costumes dos imigrantes italianos. Os imigrantes italianos eram legítimos  representantes da cultura camponesa, que valorizavam a religiosidade, o trabalho e a família. Hoje ainda é possível vivenciar toda essa tradição e herança cultural nos Caminhos de Pedra.
+          </p>
+        
+      </div>
+
+      <div class="section-second">
+        <picture class="picture-hidden">
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img class="img-bedrooms-reverse" src="assets/images/atracoes5.jpg" alt="Caminhos de Pedra" />
+        </picture>
+      </div>
+    </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    
+    
+    <div class="footer-container">
+      <div class="container-col">
+        
+        <ul>
+
+          <li class="li-title">Entre em contato</li>
+
+          <li>
+            <img src="assets/images/maps.svg" alt="Nosso endereço">
+            <a href="https://www.google.com/maps">Rua Pedro Koff, 820, Bento Gonçalves - RS</a>
+          </li>
+
+          <li>
+            <img src="assets/images/telefone.svg" title="Telefone" alt="Telefone">
+            <a href="tel: (11) 4004-000">(11) 4004-000</a>
+          </li>
+
+          <li>
+            <img src="assets/images/email.svg" title="Email" alt="Email">
+            <a href="mailto: atendimento@valentini.com.br">atendimento@valentini.com.br</a>
+          </li>
+
+        </ul>
+            
+      </div>
+      
+      <div class="container-col">
+        
+        <ul>
+          <li class="li-title">Links úteis</li>
+          
+          <li>
+              <a href="about.html">Acomodações</a>
+          </li>
+          <li>
+              <a href="blog.html">O Hotel</a>
+          </li>
+          <li>
+              <a href="blog.html">Atrações</a>
+          </li>
+          <li>
+              <a href="blog.html">Contato</a>
+          </li>
+        </ul>
+              
+      </div>
+            
+
+      <div class="container-col">
+        <div class="logo">
+        
+          <a href="index.html"><img src="assets/images/logo.png" alt="Logotipo Valentini Hotel"></a>
+          
+        </div>  
+      </div>
+              
+      
+    </div>
+
+    <div class="footer-copyright">
+
+      <h3>© Valentini Hotel 2020 Allright reserved.</h3>
+      
+      <div class="footer-copyright-images">
+        <a href="https://www.whatsapp.com/?lang=pt_br"><img src="assets/images/whatsapp.svg" alt="whatsapp"></a>
+        <a href="https://www.instagram.com/"><img src="assets/images/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/"><img src="assets/images/facebook.svg" alt="facebook"></a>
+      </div>
+
+    </div>
+
+  </footer> 
+
+  <script src="assets/js/menu.js"></script>
+
+</body>
+
+</html>

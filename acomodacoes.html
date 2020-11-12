@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel - Clinica Odontológica</title>
+  <title>Acomodações - Valentini Hotel</title>
   <meta name="description"
     content="Projeto de um site para hotel em html e css, com tecnologia sass. Projeto final individual para o curso HcodeLab.">
   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
@@ -21,9 +21,9 @@
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#5A96D5">
+  <meta name="msapplication-TileColor" content="#DCC79E">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#5A96D5">
+  <meta name="theme-color" content="#DCC79E">
   <link rel="preload" href="assets/css/main.css" as="style" />
   <link rel="stylesheet" href="assets/css/main.css" type="text/css">
 </head>
@@ -48,218 +48,152 @@
           </svg>
         </button>
         <ul>
-          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="acomodacoes.html">Acomodações</a></li>
-          <li><a href="index.html#service">O Hotel</a></li>
-          <li><a href="index.html#service">Atrações</a></li>
-          <li><a href="index.html#contact">Contato</a></li>
+          <li><a href="hotel.html">O Hotel</a></li>
+          <li><a href="atracoes.html">Atrações</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
       <div class="footer">
 
-        <a href="auth.html" class="btn-register">
+        <a href="reservas.html" class="btn-register">
           Reserva
         </a>
       </div>
     </div>
   </header>
-  <section class="banner-pages">
+  <section id="bedrooms-banner" class="banner-pages">
     <div class="overlay-banner"></div>
     <h1>Acomodações</h1>
   </section>
-  <main id="home">
+  <main id="bedrooms" class="page">
 
-    <section class="section reverse-mobile">
-      <div class="section-wrapper">
-      <div class="section-content">
-        <h2 class="section-title">Nossas <strong>Acomodações</strong> </h2>
-        <p>Os melhores hotéis são aqueles que têm história, que mantêm em suas raízes a cultura do lugar onde estão
-          instalados. Com quase vinte anos de experiência em receber pessoas, o hotel... leva Bento Gonçalves em sua
-          essência: valoriza a cultura da Capital do Vinho e das tradições herdadas dos italianos, mas sem deixar de
-          lado a modernidade e o conforto que os hóspedes buscam quando visitam a cidade.</p>
-        <a class="action" href="#" alt="Conheça todas as acomodações">Conheça todas
-          <svg xmlns="http://www.w3.org/2000/svg" width="7.179" height="12.594" viewBox="0 0 7.179 12.594">
-            <g transform="translate(137.862 -269)">
-              <g transform="translate(-137.862 269)">
-                <path
-                  d="M104.059,6.92l-5.415,5.415A.882.882,0,0,1,97.4,11.088L102.188,6.3,97.4,1.505A.882.882,0,0,1,98.644.258l5.415,5.415a.882.882,0,0,1,0,1.247Z"
-                  transform="translate(-97.138 0)" fill="currentColor" />
-              </g>
-            </g>
-          </svg>
-        </a>
-      </div>
+    <section class="schedule">
+      <div class="schedule-wrapper">
+        <div class="schedule-main">
+          <form action="">
+            <h2 class="form-title">Reserve Já</h2>
+            <div class="field">
+              <input type="date" name="check-in" id="check-in">
+              <label for="check-in">Check In</label>
+            </div>
 
-      <div class="section-second">
-        <picture>
-          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-          <img src="assets/images/suite-master.jpg" alt="Suíte Master Interior" />
-        </picture>
-      </div>
-    </div>
-    </section>
+            <div class="field">
+              <input type="date" name="check-out" id="check-out">
+              <label for="check-out">Check Out</label>
+            </div>
 
-    <section id="convenience" class="section reverse-desktop divider">
-      <div class="section-wrapper">
-        <div class="custom-shape-divider-top-1604624824">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".25" class="shape-fill"></path>
-            <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              opacity=".5" class="shape-fill"></path>
-            <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="shape-fill"></path>
-          </svg>
+            <div class="field">
+              
+              <select id="room">
+                <option disabled selected value="0">Escolha um quarto</option>
+                <option value="1">Suíte Master</option>
+                <option value="2">Suíte Júnior</option>
+                <option value="3">Apto Luxo</option>
+              </select>
+              <label for="room">Quarto</label>
+            </div>
+
+            <button type="submit" >Reservar</button>
+          </form>
         </div>
-        <div class="section-content">
-          <h2 class="section-title">Tudo feito <strong>pensando em você</strong></h2>
-          <p>Os melhores hotéis são aqueles que têm história, que mantêm em suas raízes a cultura do lugar onde estão
-            instalados. Com quase vinte anos de experiência em receber pessoas, o hotel... leva Bento Gonçalves em sua
-            essência: valoriza a cultura da Capital do Vinho e das tradições herdadas dos italianos, mas sem deixar de
-            lado a modernidade e o conforto que os hóspedes buscam quando visitam a cidade.</p>
-          
+        <div class="schedule-second">
+          <p>Perfeito para famílias que vêm para a cidade a passeio ou para quem não abre </p>
         </div>
-  
-        <div class="section-second">
-          <picture>
-            <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-            <img class="img-convenience" src="assets/images/convenience.jpg" alt="Convenience" />
-          </picture>
-        </div>
-
       </div>
       
-
-    </section>
-
-    <section id="coffee" class="section">
-      <div class="section-wrapper">
-      <div class="section-content">
-        <h2 class="section-title">Café <strong>da manhã</strong> </h2>
-        <p>Os melhores hotéis são aqueles que têm história, que mantêm em suas raízes a cultura do lugar onde estão
-          instalados. Com quase vinte anos de experiência em receber pessoas, o hotel... leva Bento Gonçalves em sua
-          essência: valoriza a cultura da Capital do Vinho e das tradições herdadas dos italianos, mas sem deixar de
-          lado a modernidade e o conforto que os hóspedes buscam quando visitam a cidade.</p>
-        <a class="action" href="#" alt="Conheça todas as acomodações">Saiba mais
-          <svg xmlns="http://www.w3.org/2000/svg" width="7.179" height="12.594" viewBox="0 0 7.179 12.594">
-            <g transform="translate(137.862 -269)">
-              <g transform="translate(-137.862 269)">
-                <path
-                  d="M104.059,6.92l-5.415,5.415A.882.882,0,0,1,97.4,11.088L102.188,6.3,97.4,1.505A.882.882,0,0,1,98.644.258l5.415,5.415a.882.882,0,0,1,0,1.247Z"
-                  transform="translate(-97.138 0)" fill="currentColor" />
-              </g>
-            </g>
-          </svg>
-        </a>
-      </div>
-
-      <div class="section-second">
-        <picture class="picture-hidden">
-          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-          <img class="img-coffee" src="assets/images/coffee1.jpg" alt="Suíte Master Interior" />
-        </picture>
-      </div>
-    </div>
-
-    <div class="section-gallery">
-      <picture>
-        <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-        <img class="img-coffee" src="assets/images/coffee2.jpg" alt="Suíte Master Interior" />
-      </picture>
-      <picture>
-        <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-        <img class="img-coffee" src="assets/images/coffee3.jpg" alt="Suíte Master Interior" />
-      </picture>
-      <picture>
-        <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-        <img class="img-coffee" src="assets/images/coffee4.jpg" alt="Suíte Master Interior" />
-      </picture>
-    </div>
-
-    </section>
-
-    <section id="coffee" class="section divider">
-      <div class="section-wrapper">
-        <div class="custom-shape-divider-top-1604624824">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".25" class="shape-fill"></path>
-            <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              opacity=".5" class="shape-fill"></path>
-            <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="shape-fill"></path>
-          </svg>
-        </div>
-      <div class="section-content">
-        <h2 class="section-title">Atrações <strong>locais</strong> </h2>
-        <p>Os melhores hotéis são aqueles que têm história, que mantêm em suas raízes a cultura do lugar onde estão
-          instalados. Com quase vinte anos de experiência em receber pessoas, o hotel... leva Bento Gonçalves em sua
-          essência: valoriza a cultura da Capital do Vinho e das tradições herdadas dos italianos, mas sem deixar de
-          lado a modernidade e o conforto que os hóspedes buscam quando visitam a cidade.</p>
-        <a class="action main" href="#" alt="Conheça todas as acomodações">Saiba mais
-          <svg xmlns="http://www.w3.org/2000/svg" width="7.179" height="12.594" viewBox="0 0 7.179 12.594">
-            <g transform="translate(137.862 -269)">
-              <g transform="translate(-137.862 269)">
-                <path
-                  d="M104.059,6.92l-5.415,5.415A.882.882,0,0,1,97.4,11.088L102.188,6.3,97.4,1.505A.882.882,0,0,1,98.644.258l5.415,5.415a.882.882,0,0,1,0,1.247Z"
-                  transform="translate(-97.138 0)" fill="currentColor" />
-              </g>
-            </g>
-          </svg>
-        </a>
-      </div>
-
-      
-    </div>
-
-    <div class="section-gallery">
-      <picture>
-        <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-        <img class="img-coffee" src="assets/images/atracoes1.jpg" alt="Suíte Master Interior" />
-      </picture>
-      <picture>
-        <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-        <img class="img-coffee" src="assets/images/atracoes2.jpg" alt="Suíte Master Interior" />
-      </picture>
-      <picture>
-        <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-        <img class="img-coffee" src="assets/images/atracoes3.jpg" alt="Suíte Master Interior" />
-      </picture>
-    </div>
-
     </section>
 
     <section class="section">
       <div class="section-wrapper">
       <div class="section-content">
-        <h2 class="section-title">Quem <strong>Somos</strong> </h2>
-        <p>Os melhores hotéis são aqueles que têm história, que mantêm em suas raízes a cultura do lugar onde estão
-          instalados. Com quase vinte anos de experiência em receber pessoas, o hotel... leva Bento Gonçalves em sua
-          essência: valoriza a cultura da Capital do Vinho e das tradições herdadas dos italianos, mas sem deixar de
-          lado a modernidade e o conforto que os hóspedes buscam quando visitam a cidade.</p>
-        <a class="action main" href="#" alt="Conheça todas as acomodações">Conheça o hotel
-          <svg xmlns="http://www.w3.org/2000/svg" width="7.179" height="12.594" viewBox="0 0 7.179 12.594">
-            <g transform="translate(137.862 -269)">
-              <g transform="translate(-137.862 269)">
-                <path
-                  d="M104.059,6.92l-5.415,5.415A.882.882,0,0,1,97.4,11.088L102.188,6.3,97.4,1.505A.882.882,0,0,1,98.644.258l5.415,5.415a.882.882,0,0,1,0,1.247Z"
-                  transform="translate(-97.138 0)" fill="currentColor" />
-              </g>
-            </g>
-          </svg>
-        </a>
+        <h2 class="section-title">Suíte <strong>Master</strong> </h2>
+        <p>Perfeito para famílias que vêm para a cidade a passeio ou para quem não abre mão de mais espaço, conforto e modernidade.</p>
+        <ul>
+          <li>Ar condicionado</li>
+          <li>Calefação</li>
+          <li>Internet sem-fio</li>
+          <li>Telefone</li>
+          <li>Água com aquecimento central</li>
+          <li>Dois banheiros</li>
+          <li>Duas TVs de tela plana</li>
+          <li>Ofurô</li>
+          <li>Cofre eletrônico</li>
+        </ul>
       </div>
 
       <div class="section-second">
-        <picture>
+        <picture class="picture-hidden">
           <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
-          <img src="assets/images/quem-somos.jpg" alt="Suíte Master Interior" />
+          <img class="img-bedrooms" src="assets/images/suite-master.jpg" alt="Suíte Master Interior" />
+        </picture>
+      </div>
+    </div>
+    </section>
+
+    <section class="section reverse-desktop divider">
+      <div class="section-wrapper">
+        <div class="custom-shape-divider-top-1604624824">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+              opacity=".25" class="shape-fill"></path>
+            <path
+              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+              opacity=".5" class="shape-fill"></path>
+            <path
+              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              class="shape-fill"></path>
+          </svg>
+        </div>
+      <div class="section-content">
+        <h2 class="section-title">Suíte <strong>Júnior</strong> </h2>
+        <p>Perfeito para famílias que vêm para a cidade a passeio ou para quem não abre mão de mais espaço, conforto e modernidade.</p>
+        <ul>
+          <li>Ar condicionado</li>
+          <li>Calefação</li>
+          <li>Internet sem-fio</li>
+          <li>Telefone</li>
+          <li>Água com aquecimento central</li>
+          <li>Dois banheiros</li>
+          <li>Duas TVs de tela plana</li>
+          <li>Ofurô</li>
+          <li>Cofre eletrônico</li>
+        </ul>
+      </div>
+
+      <div class="section-second">
+        <picture class="picture-hidden">
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img class="img-bedrooms-reverse" src="assets/images/suite-junior.jpg" alt="Suíte Júnior Interior" />
+        </picture>
+      </div>
+    </div>
+    </section>
+
+    <section class="section">
+      <div class="section-wrapper">
+      <div class="section-content">
+        <h2 class="section-title">Apartamento <strong>Luxo</strong> </h2>
+        <p>Perfeito para famílias que vêm para a cidade a passeio ou para quem não abre mão de mais espaço, conforto e modernidade.</p>
+        <ul>
+          <li>Ar condicionado</li>
+          <li>Calefação</li>
+          <li>Internet sem-fio</li>
+          <li>Telefone</li>
+          <li>Água com aquecimento central</li>
+          <li>Dois banheiros</li>
+          <li>Duas TVs de tela plana</li>
+          <li>Ofurô</li>
+          <li>Cofre eletrônico</li>
+        </ul>
+      </div>
+
+      <div class="section-second">
+        <picture class="picture-hidden">
+          <!-- <source srcset="assets/images/ferrari-interior.webp" type="image/webp" /> -->
+          <img class="img-bedrooms" src="assets/images/apto-luxo.jpg" alt="Apartamento Luxo Interior" />
         </picture>
       </div>
     </div>
