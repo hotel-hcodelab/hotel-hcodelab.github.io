@@ -9,7 +9,7 @@
 - [x] Menu Mobile
 - [x] Footer
 - [] Favicon
-- [] meta tags seo
+- [x] meta tags seo
 - [x] Formulário de Reserva
 - [x] Buttons
 - [x] Logo
