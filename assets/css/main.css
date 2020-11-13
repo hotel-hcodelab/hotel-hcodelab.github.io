@@ -1356,4 +1356,33 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+#error {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+#error > h1 {
+  margin: 0;
+  max-width: 475px;
+  padding: var(--space);
+  font-size: 25px;
+}
+#error > h1 > strong {
+  display: block;
+  color: var(--main);
+  text-transform: uppercase;
+  font-size: 35px;
+}
+#error > img {
+  width: 80%;
+  max-width: 375px;
+}
+
+@media (min-width: 1200px) {
+  #error {
+    flex-direction: row;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

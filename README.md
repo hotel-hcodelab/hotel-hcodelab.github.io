@@ -5,16 +5,16 @@
 - [x] Repositório git Pages
 - [x] Estrutura
 - [x] Sass
-- [] Menu
-- [] Menu Mobile
-- [] Footer
+- [x] Menu
+- [x] Menu Mobile
+- [x] Footer
 - [] Favicon
 - [] meta tags seo
-- [] Formulário de Reserva
-- [] Buttons
-- [] Logo
-- [] Cores
-- [] Texto
-- [] Imagens
-- [] ícones svg
+- [x] Formulário de Reserva
+- [x] Buttons
+- [x] Logo
+- [x] Cores
+- [x] Texto
+- [x] Imagens
+- [x] ícones svg
 
