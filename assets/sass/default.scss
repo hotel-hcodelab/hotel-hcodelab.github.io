@@ -55,6 +55,30 @@ body {
     }
 }
 
+@media (min-width: 768px) {
+    body {
+        #bedrooms-banner {
+            background-image: url("/assets/images/acomodacoes-desktop@1x.jpg");
+            background-position-x: left;
+        }
+        #attractions-banner {
+            background-image: url("/assets/images/banner-atracoes@1x.jpg");
+            background-position-x: left;
+        }
+        #hotel-banner {
+            background-image: url("/assets/images/banner-hotel@1x.jpg");
+        }
+        #reservas-banner {
+            background-image: url("/assets/images/reservas@1x.jpg");
+        }
+        #contato-banner {
+            background-image: url("/assets/images/contato@1x.jpg");
+        }
+    }
+}
+
+
+
 
 @media (min-width: 1200px) {
     body {
@@ -83,8 +107,27 @@ body {
                 z-index: 1;
             }
         }
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
         #bedrooms-banner {
-            background-image: url("/assets/images/acomodacoes-desktop.jpg");
+            background-image: url("/assets/images/acomodacoes-desktop@2x.jpg");
+            background-position-x: left;
+        }
+        #attractions-banner {
+            background-image: url("/assets/images/banner-atracoes@2x.jpg");
+            background-position-x: left;
+        }
+        #hotel-banner {
+            background-image: url("/assets/images/banner-hotel@2x.jpg");
+        }
+        #reservas-banner {
+            background-image: url("/assets/images/reservas@2x.jpg");
+        }
+        #contato-banner {
+            background-image: url("/assets/images/contato@2x.jpg");
         }
     }
 }

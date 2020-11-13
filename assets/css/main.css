@@ -11,7 +11,7 @@
   --third:#69E0A5;
   --space: 20px;
   --border-radius: 10px;
-  --overlay: #63636349;
+  --overlay: #63636393;
   --header-mobile: #ff5b09e7;
   --header-desktop: transparent;
   --header-text: #fff;
@@ -23,6 +23,7 @@
   --text-footer-copyright: #fff;
   --bg-footer-copyright: #2c2517;
   --convenience: #DCC79E;
+  --bg-convenience-icons: #ffffff47;
   --text: #707070;
   --text-main: #fff;
   --text-main-80: rgba(255, 255, 255, 0.80);
@@ -104,6 +105,25 @@ body #contato-banner {
   background-image: url("/assets/images/contato.jpg");
 }
 
+@media (min-width: 768px) {
+  body #bedrooms-banner {
+    background-image: url("/assets/images/acomodacoes-desktop@1x.jpg");
+    background-position-x: left;
+  }
+  body #attractions-banner {
+    background-image: url("/assets/images/banner-atracoes@1x.jpg");
+    background-position-x: left;
+  }
+  body #hotel-banner {
+    background-image: url("/assets/images/banner-hotel@1x.jpg");
+  }
+  body #reservas-banner {
+    background-image: url("/assets/images/reservas@1x.jpg");
+  }
+  body #contato-banner {
+    background-image: url("/assets/images/contato@1x.jpg");
+  }
+}
 @media (min-width: 1200px) {
   body > main {
     min-height: calc(100vh - 341px);
@@ -130,8 +150,24 @@ body #contato-banner {
     line-height: 60px;
     z-index: 1;
   }
+}
+@media (min-width: 1500px) {
   body #bedrooms-banner {
-    background-image: url("/assets/images/acomodacoes-desktop.jpg");
+    background-image: url("/assets/images/acomodacoes-desktop@2x.jpg");
+    background-position-x: left;
+  }
+  body #attractions-banner {
+    background-image: url("/assets/images/banner-atracoes@2x.jpg");
+    background-position-x: left;
+  }
+  body #hotel-banner {
+    background-image: url("/assets/images/banner-hotel@2x.jpg");
+  }
+  body #reservas-banner {
+    background-image: url("/assets/images/reservas@2x.jpg");
+  }
+  body #contato-banner {
+    background-image: url("/assets/images/contato@2x.jpg");
   }
 }
 #footer {
@@ -193,8 +229,9 @@ body #contato-banner {
   margin-top: 40px;
 }
 #footer .footer-copyright h3 {
-  font-size: 20px;
+  font-size: 16px;
   margin: 1em auto;
+  font-weight: normal;
 }
 #footer .footer-copyright > div {
   flex-direction: row;
@@ -319,6 +356,7 @@ body #contato-banner {
   background-color: var(--btn-white);
   color: var(--btn-white-text);
   margin: 20px;
+  margin-bottom: 30px;
 }
 #header .menu .btn-register:hover {
   background-color: var(--btn-hover);
@@ -428,7 +466,7 @@ body #contato-banner {
   opacity: 1;
   height: 100vh;
   width: 100vw;
-  z-index: 1;
+  z-index: 2;
 }
 .open-menu #header {
   width: calc(100% - (var(--space) * 2));
@@ -581,6 +619,43 @@ body #contato-banner {
 .section .section-content {
   flex-direction: column;
   padding: var(--space);
+}
+.section .section-content.convenience {
+  max-width: 700px;
+}
+.section .section-content.convenience > ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.section .section-content.convenience > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  padding: var(--space);
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 2px 3px 6px #0000004d;
+  background-color: var(--bg-convenience-icons);
+}
+.section .section-content.convenience > ul > li > img {
+  width: 40px;
+}
+.section .section-content.convenience > ul > li > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 10px;
 }
 .section .section-content .section-title {
   text-transform: uppercase;
@@ -756,6 +831,16 @@ body #contato-banner {
 }
 
 @media (min-width: 576px) {
+  .section .section-content.convenience > ul > li {
+    width: 150px;
+    height: 150px;
+  }
+  .section .section-content.convenience > ul > li > img {
+    width: 50px;
+  }
+  .section .section-content.convenience > ul > li > span {
+    font-size: 18px;
+  }
   .section .section-gallery > picture {
     width: 99%;
     align-items: center;
@@ -840,6 +925,9 @@ body #contato-banner {
     min-width: 600px;
     padding: 60px;
   }
+  .section .section-content.convenience {
+    min-width: 650px;
+  }
   .section#attractions .section-content {
     max-width: initial;
     min-width: initial;
@@ -910,6 +998,7 @@ body #contato-banner {
   .banner-home {
     max-height: 800px;
     justify-content: end;
+    background-image: url("/assets/images/banner-home@1x.jpg");
   }
   .banner-home > h1 {
     font-size: 75px;
@@ -939,6 +1028,9 @@ body #contato-banner {
   }
 }
 @media (min-width: 1500px) {
+  .banner-home {
+    background-image: url("/assets/images/banner-home@2x.jpg");
+  }
   .banner-home > h1 {
     margin-left: 15vw;
   }
@@ -952,7 +1044,7 @@ body #contato-banner {
   flex-direction: column;
 }
 .schedule.contato .map, .form-contato.contato .map {
-  background-image: url("/assets/images/map-mobile.png");
+  background-image: url("/assets/images/map-mobile.jpg");
   background-size: cover;
   background-position-x: 30%;
   background-position-y: center;
@@ -1089,7 +1181,7 @@ body #contato-banner {
   .schedule.contato .map, .form-contato.contato .map {
     position: absolute;
     top: 70px;
-    background-image: url("/assets/images/map.png");
+    background-image: url("/assets/images/map.jpg");
     background-size: cover;
     background-position-x: 30%;
     background-position-y: center;
@@ -1184,9 +1276,14 @@ body #contato-banner {
     padding-top: 200px;
   }
 }
+.faq .section-wrapper {
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
 .faq .section-content {
-  max-width: initial;
-  width: initial;
+  max-width: 1000px;
+  width: 100%;
 }
 
 details {

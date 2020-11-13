@@ -39,6 +39,7 @@
         .btn-register {
             @include button-white;
             margin: 20px;
+            margin-bottom: 30px;
         }
         .footer {
             flex-direction: column;
@@ -137,7 +138,7 @@
         opacity: 1;
         height: 100vh;
         width: 100vw;
-        z-index: 1;
+        z-index: 2 ;
     }
     #header  {
         width: calc(100% - (var(--space) * 2));

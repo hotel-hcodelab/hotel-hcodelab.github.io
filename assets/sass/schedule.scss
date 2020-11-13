@@ -5,7 +5,7 @@
     &.contato {
         flex-direction: column;
         .map {
-            background-image: url('/assets/images/map-mobile.png');
+            background-image: url('/assets/images/map-mobile.jpg');
             background-size: cover;
             background-position-x: 30%;
             background-position-y: center;
@@ -123,7 +123,7 @@
             .map {
                 position: absolute;
                 top: 70px;
-                background-image: url('/assets/images/map.png');
+                background-image: url('/assets/images/map.jpg');
                 background-size: cover;
                 background-position-x: 30%;
                 background-position-y: center;

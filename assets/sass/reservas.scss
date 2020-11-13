@@ -1,7 +1,13 @@
 .faq {
+    .section-wrapper {
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+    }
     .section-content {
-        max-width: initial;
-        width: initial;
+        max-width: 1000px;
+        width: 100%;
+
     }
 }
     
