@@ -7,7 +7,7 @@
 }
 :root {
   --main: #FF5D09;
-  --second: #2D2B87;
+  --second: #FF5D09;
   --third:#69E0A5;
   --space: 20px;
   --border-radius: 10px;
@@ -45,6 +45,7 @@
   --form-bg: #fff;
   --label: #271B06;
   --bg-input: #EEEEEE;
+  --maps-bg: #fff;
 }
 
 * {
@@ -703,6 +704,31 @@ body #contato-banner {
   margin-left: -20px;
   box-shadow: 2px 3px 6px #0000004d;
 }
+.section .section-second .wrapper-social {
+  flex-wrap: wrap;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space) auto;
+}
+.section .section-second .wrapper-social > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  padding: var(--space);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+.section .section-second .wrapper-social > a > img {
+  width: 80px;
+  margin-bottom: 5px;
+}
 .section .section-gallery {
   flex-direction: row;
   flex-wrap: wrap;
@@ -762,6 +788,10 @@ body #contato-banner {
   .section .section-second picture img.img-bedrooms-reverse {
     margin-left: 0;
   }
+  .section .section-second .wrapper-social {
+    margin: auto;
+    padding-top: 150px;
+  }
 }
 @media (min-width: 992px) {
   .section .section-gallery > picture {
@@ -809,6 +839,11 @@ body #contato-banner {
     max-width: 600px;
     min-width: 600px;
     padding: 60px;
+  }
+  .section#attractions .section-content {
+    max-width: initial;
+    min-width: initial;
+    padding-bottom: 0;
   }
 }
 @media (min-width: 1500px) {
@@ -908,39 +943,71 @@ body #contato-banner {
     margin-left: 15vw;
   }
 }
-.schedule {
+.schedule, .form-contato {
   width: 100%;
   align-items: center;
   justify-content: center;
 }
-.schedule.contato {
+.schedule.contato, .form-contato.contato {
   flex-direction: column;
 }
-.schedule.contato .map {
+.schedule.contato .map, .form-contato.contato .map {
   background-image: url("/assets/images/map-mobile.png");
   background-size: cover;
   background-position-x: 30%;
   background-position-y: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 500px;
-  margin-top: -70px;
+  height: 800px;
+  margin-top: -425px;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 }
-.schedule .schedule-wrapper {
+.schedule.contato .map > a, .form-contato.contato .map > a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 20px;
+  background-color: var(--maps-bg);
+  border-radius: 10px;
+  border: 1px solid var(--main);
+  margin-bottom: -10px;
+  box-shadow: 2px -3px 6px #0000004d;
+  transition: all 0.3s ease-in-out;
+}
+.schedule.contato .map > a:hover, .form-contato.contato .map > a:hover {
+  margin-bottom: 0px;
+}
+.schedule.contato .map > a > img, .form-contato.contato .map > a > img {
+  width: 50px;
+}
+.schedule .schedule-wrapper, .form-contato .schedule-wrapper {
   width: 100%;
   max-width: 1400px;
 }
-.schedule .schedule-second {
+.schedule .schedule-second, .form-contato .schedule-second {
   display: none;
 }
-.schedule .schedule-main {
+.schedule .schedule-main, .form-contato .schedule-main {
   width: 100%;
   align-items: center;
   justify-content: center;
   margin-top: -40px;
   z-index: 1;
 }
-.schedule .schedule-main > form {
+.schedule .schedule-main.contact, .form-contato .schedule-main.contact {
+  margin-top: var(--space);
+}
+.schedule .schedule-main.contact > form, .form-contato .schedule-main.contact > form {
+  width: 100%;
+}
+.schedule .schedule-main > form, .form-contato .schedule-main > form {
   width: 90%;
   max-width: 400px;
   padding: var(--space);
@@ -950,25 +1017,25 @@ body #contato-banner {
   font-family: "Poppins", sans-serif;
   flex-direction: column;
 }
-.schedule .schedule-main > form .form-title {
+.schedule .schedule-main > form .form-title, .form-contato .schedule-main > form .form-title {
   font-size: 25px;
   align-self: center;
   margin: 10px 0;
 }
-.schedule .schedule-main > form .field {
+.schedule .schedule-main > form .field, .form-contato .schedule-main > form .field {
   flex-direction: column;
   padding: 5px 0px;
   width: 100%;
   margin-bottom: var(--space);
 }
-.schedule .schedule-main > form .field > label {
+.schedule .schedule-main > form .field > label, .form-contato .schedule-main > form .field > label {
   order: 0;
   font-size: 14px;
   color: var(--label);
   font-weight: bold;
   margin-bottom: 5px;
 }
-.schedule .schedule-main > form .field > input, .schedule .schedule-main > form .field > select {
+.schedule .schedule-main > form .field > input, .schedule .schedule-main > form .field > select, .schedule .schedule-main > form .field > textarea, .form-contato .schedule-main > form .field > input, .form-contato .schedule-main > form .field > select, .form-contato .schedule-main > form .field > textarea {
   order: 1;
   outline: none;
   width: 100%;
@@ -978,14 +1045,17 @@ body #contato-banner {
   font-size: 14px;
   padding: 15px;
 }
-.schedule .schedule-main > form .field > input:focus, .schedule .schedule-main > form .field > select:focus {
+.schedule .schedule-main > form .field > input:focus, .schedule .schedule-main > form .field > select:focus, .schedule .schedule-main > form .field > textarea:focus, .form-contato .schedule-main > form .field > input:focus, .form-contato .schedule-main > form .field > select:focus, .form-contato .schedule-main > form .field > textarea:focus {
   border: 1px solid var(--main);
   color: var(--main);
 }
-.schedule .schedule-main > form .field input:focus + label, .schedule .schedule-main > form .field select:focus + label {
+.schedule .schedule-main > form .field input:focus + label, .schedule .schedule-main > form .field select:focus + label, .form-contato .schedule-main > form .field input:focus + label, .form-contato .schedule-main > form .field select:focus + label {
   color: var(--main);
 }
-.schedule .schedule-main > form > button {
+.schedule .schedule-main > form .field > textarea, .form-contato .schedule-main > form .field > textarea {
+  resize: vertical;
+}
+.schedule .schedule-main > form > button, .form-contato .schedule-main > form > button {
   border: none;
   display: flex;
   justify-content: center;
@@ -1005,18 +1075,18 @@ body #contato-banner {
   transition: background-color 0.2s ease-in-out;
   align-self: center;
 }
-.schedule .schedule-main > form > button:hover {
+.schedule .schedule-main > form > button:hover, .form-contato .schedule-main > form > button:hover {
   background-color: var(--btn-hover);
 }
-.schedule .schedule-main > form > button:active {
+.schedule .schedule-main > form > button:active, .form-contato .schedule-main > form > button:active {
   background-color: var(--btn-active);
 }
 
 @media (min-width: 1200px) {
-  .schedule.contato {
+  .schedule.contato, .form-contato.contato {
     position: relative;
   }
-  .schedule.contato .map {
+  .schedule.contato .map, .form-contato.contato .map {
     position: absolute;
     top: 70px;
     background-image: url("/assets/images/map.png");
@@ -1027,44 +1097,52 @@ body #contato-banner {
     width: 100%;
     height: 350px;
     margin-top: -70px;
+    justify-content: flex-start;
   }
-  .schedule .schedule-main {
+  .schedule.contato .map > a, .form-contato.contato .map > a {
+    margin-left: 15vw;
+  }
+  .schedule .schedule-main, .form-contato .schedule-main {
     margin-top: -150px;
     width: 50%;
     order: 2;
   }
-  .schedule .schedule-second {
+  .schedule .schedule-main.contact, .form-contato .schedule-main.contact {
+    width: initial;
+    justify-content: flex-start;
+  }
+  .schedule .schedule-second, .form-contato .schedule-second {
     display: flex;
     width: 50%;
     order: 1;
     align-items: center;
     justify-content: flex-end;
   }
-  .schedule .schedule-second > p {
+  .schedule .schedule-second > p, .form-contato .schedule-second > p {
     margin: 0;
     width: 80%;
     font-size: 40px;
     color: var(--text);
   }
-  .schedule.home .schedule-main {
+  .schedule.home .schedule-main, .form-contato.home .schedule-main {
     margin-top: -75px;
     width: 100%;
   }
-  .schedule.home .schedule-main > form {
+  .schedule.home .schedule-main > form, .form-contato.home .schedule-main > form {
     position: relative;
     max-width: initial;
     flex-direction: row;
     width: fit-content;
     padding: var(--space) 40px;
   }
-  .schedule.home .schedule-main > form .form-title {
+  .schedule.home .schedule-main > form .form-title, .form-contato.home .schedule-main > form .form-title {
     display: none;
   }
-  .schedule.home .schedule-main > form .field {
+  .schedule.home .schedule-main > form .field, .form-contato.home .schedule-main > form .field {
     margin-right: var(--space);
     max-width: 200px;
   }
-  .schedule.home .schedule-main > form > button {
+  .schedule.home .schedule-main > form > button, .form-contato.home .schedule-main > form > button {
     border: none;
     display: flex;
     justify-content: center;
@@ -1084,13 +1162,13 @@ body #contato-banner {
     transition: background-color 0.2s ease-in-out;
     align-self: center;
   }
-  .schedule.home .schedule-main > form > button:hover {
+  .schedule.home .schedule-main > form > button:hover, .form-contato.home .schedule-main > form > button:hover {
     background-color: var(--btn-hover);
   }
-  .schedule.home .schedule-main > form > button:active {
+  .schedule.home .schedule-main > form > button:active, .form-contato.home .schedule-main > form > button:active {
     background-color: var(--btn-active);
   }
-  .schedule.home .schedule-second {
+  .schedule.home .schedule-second, .form-contato.home .schedule-second {
     display: none;
   }
 }
@@ -1105,6 +1183,80 @@ body #contato-banner {
   .page .divider {
     padding-top: 200px;
   }
+}
+.faq .section-content {
+  max-width: initial;
+  width: initial;
+}
+
+details {
+  outline: none;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  position: relative;
+  border-radius: 6px;
+  background-color: #ECEFF1;
+  color: var(--text);
+  transition: background-color 0.15s;
+}
+details > :last-child {
+  margin-bottom: 1rem;
+}
+details::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  opacity: 0.15;
+  box-shadow: 0 0.25em 0.5em #263238;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: -1;
+}
+details[open] {
+  background-color: #FFF;
+}
+details[open]::before {
+  opacity: 0.6;
+}
+details > p {
+  margin: 0;
+  font-size: 18px;
+}
+
+summary {
+  outline: none;
+  padding: 1rem 2em 1rem 0;
+  display: block;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+summary::before, summary::after {
+  width: 0.75em;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "";
+  background-color: currentColor;
+  text-align: right;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+}
+summary::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+summary::-webkit-details-marker {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

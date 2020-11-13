@@ -84,6 +84,31 @@
                 }
             }
         }
+        .wrapper-social {
+            flex-wrap: wrap;
+            max-width: 400px;
+            align-items: center;
+            justify-content: center;
+            margin: var(--space) auto;
+            > a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                width: 180px;
+                height: 180px;
+                padding: var(--space);
+                color: var(--text);
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 500;
+                > img {
+                    width: 80px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
     }
     .section-gallery {
         flex-direction: row;
@@ -160,6 +185,10 @@
                     }
                 }
             }
+            .wrapper-social {
+                margin: auto;
+                padding-top: 150px;
+            }
         }
     }
     
@@ -233,6 +262,13 @@
             max-width: 600px;
             min-width: 600px;
             padding: 60px;
+        }
+        &#attractions {
+            .section-content {
+                max-width: initial;
+                min-width: initial;
+                padding-bottom: 0;
+            }
         }
     }
 }
